@@ -31,7 +31,25 @@ class Bejeweled {
     }
 
     static checkForMatches(grid) {
-        // Fill this in
+        // check horizontally
+        for (let i = 0; i < array.length; i++) {}
+    }
+
+    static fillGrid(grid) {
+        const newGridSymbols = [1, 2, 3, 4, 5];
+
+        for (let i = 0; i < grid.length; i++) {
+            const row = i;
+            for (let j = 0; j < grid[i].length; j++) {
+                const col = j;
+                if (grid[i][j] === " ") {
+                    const getRandomSymbol = Math.floor(
+                        Math.random() * newGridSymbols.length
+                    );
+                    grid[i].splice(j, 1, getRandomSymbol);
+                }
+            }
+        }
     }
 }
 
